@@ -7,9 +7,10 @@
 #define PCPwONPin 2 //D2 电脑开机键
 #define FunPwnPin 3 //D3 风扇输出调速
 #define PsONPin 4   //D4 电源启动开关
-#define Disk1Pin 6  //D5 硬盘控制1
-#define Disk2Pin 7  //D6 硬盘控制2
-#define Disk3Pin 8  //D7 硬盘控制3
+#define PwLedPin 5  //D5 电源LED灯
+#define Disk1Pin 6  //D6 硬盘控制1
+#define Disk2Pin 7  //D7 硬盘控制2
+#define Disk3Pin 8  //D8 硬盘控制3
 
 //0 关闭   1 开机，  2 正在开机
 int IsOn = 0;
@@ -33,6 +34,7 @@ void setup()
   pinMode(PCPwONPin, OUTPUT);
   pinMode(FunPwnPin, OUTPUT);
   pinMode(PsONPin, OUTPUT);
+  pinMode(PwLedPin, OUTPUT);
   pinMode(Disk1Pin, OUTPUT);
   pinMode(Disk2Pin, OUTPUT);
   pinMode(Disk3Pin, OUTPUT);
@@ -94,6 +96,9 @@ void SetInit()
   //将状态设置为关机
   IsOn = 0;
 
+  //关闭LED
+  digitalWrite(PwLedPin, LOW);
+
   // 关闭风扇
   SetFunPwm(0);
 
@@ -112,6 +117,8 @@ void SetPcON()
   OpenPw();
   delay(500);
 
+  //点亮LED灯
+  digitalWrite(PwLedPin, HIGH);
   //开启风扇，设置转速为大概一半;
   SetFunPwm(125);
   delay(2000);
