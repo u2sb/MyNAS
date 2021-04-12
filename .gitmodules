@@ -1,0 +1,3 @@
+[submodule "8盘位NAS机箱/控制程序/Fan/FanCtrl/PWM"]
+	path = 8盘位NAS机箱/控制程序/Fan/FanCtrl/PWM
+	url = https://github.com/terryjmyers/PWM.git
