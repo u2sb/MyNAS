@@ -3,7 +3,7 @@
 #define rt_pin1 14
 #define rt_pin2 15
 #define fan_pin1 3
-#define fan_pin2 5
+#define fan_pin2 11
 
 int32_t frequency = 25000;
 
@@ -21,6 +21,9 @@ void setup()
     InitTimers();
     SetPinFrequency(fan_pin1, frequency);
     SetPinFrequency(fan_pin2, frequency);
+
+    //为了兼容旧版PCB，使用最新的PCB不需要这一句，加上也无所谓
+    pinMode(5, INPUT);
 
     pinMode(rt_pin1, INPUT);
     pinMode(rt_pin2, INPUT);
