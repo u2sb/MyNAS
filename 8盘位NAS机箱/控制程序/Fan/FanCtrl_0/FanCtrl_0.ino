@@ -18,12 +18,9 @@ int8_t min_pwm2 = 100;
 
 void setup()
 {
-    InitTimers();
-    SetPinFrequency(fan_pin1, frequency);
-    SetPinFrequency(fan_pin2, frequency);
-
-    //为了兼容旧版PCB，使用最新的PCB不需要这一句，加上也无所谓
-    pinMode(5, INPUT);
+    InitTimersSafe();
+    SetPinFrequencySafe(fan_pin1, frequency);
+    SetPinFrequencySafe(fan_pin2, frequency);
 
     pinMode(rt_pin1, INPUT);
     pinMode(rt_pin2, INPUT);
@@ -41,6 +38,7 @@ void loop()
     delay(50000);
 }
 
+//设置风扇转速
 void set_fan()
 {
     if (pwm1 != fan_pwm1)
@@ -56,6 +54,7 @@ void set_fan()
     }
 }
 
+//读取温度
 void read_temp()
 {
     float v_rt1 = analogRead(rt_pin1) / 204.6;
