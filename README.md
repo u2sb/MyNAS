@@ -6,6 +6,17 @@
 
 具体请看每个单独的项目；
 
+
+## 开发软件
+
+- [中望CAD](https://www.zwsoft.cn/)
+- [立创EDA](https://lceda.cn/)
+- [Ardunio IDE](https://www.arduino.cc/)
+- [Visual Studio](https://visualstudio.microsoft.com/)
+- [visualmicro](https://www.visualmicro.com/)
+- [Visual Studio Code](https://visualstudio.microsoft.com/)
+
+
 ## QQ 群
 
 说明：
