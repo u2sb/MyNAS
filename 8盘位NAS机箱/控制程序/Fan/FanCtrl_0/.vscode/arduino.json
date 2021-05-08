@@ -1,5 +1,0 @@
-{
-    "configuration": "cpu=atmega328old",
-    "board": "arduino:avr:nano",
-    "sketch": "FanCtrl_0.ino"
-}
