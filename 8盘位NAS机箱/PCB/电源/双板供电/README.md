@@ -1,4 +1,4 @@
-## DC2ATX
+# DC2ATX
 
 基于 [KCORES-CSPS-to-ATX-Converter](https://github.com/KCORES/KCORES-CSPS-to-ATX-Converter) 修改的一个适合 NAS 使用的 DC-ATX 转接板。
 
@@ -32,12 +32,12 @@
 
 ![5V供电板顶面](IMG/5V供电板顶面.svg) ![5V供电板底面](IMG/5V供电板底面.svg)
 
-## BOOM
+## BOM
 
-非标准 BOOM 表，方便购买
+非标准 BOM 表，方便购买
 
 - `CSPS_64P_2.54MM` 某宝可搜 `FCI 64P 2.54MM`(质量较好，价格较高) 或 `SLOT 64P`(较便宜，低功率电源适用，注意看好间距)
-- `5566连接器` 规格：`2\*10P`(ATX 供电) `2\*4P`(CPU/PCIE 供电) `2\*2P`(硬盘供电)
+- `5566连接器` 规格：`2*10P`(ATX 供电) `2*4P`(CPU/PCIE 供电) `2*2P`(硬盘供电)
 - `IC座` DIP8
 - `接线端子` 5.08MM 3P
 - `排针` 2.54mm 3P 4P 配跳帽
